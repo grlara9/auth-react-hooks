@@ -5,7 +5,7 @@ const Register=()=>{
     return (
         <div className="register">
             <form>
-                <label>Email</label>
+                <label>Email</label> 
                 <input type="text" name="email" />
                 <label>Username</label>
                 <input type="text" name="username" />
