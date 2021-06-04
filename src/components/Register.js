@@ -4,7 +4,7 @@ import './Register.css';
 const Register=()=>{
 
     const {register, handleSubmit, 
-        formState:{errors},} = useForm();
+        formState:{errors, isDirty, isValid},} = useForm({mode: "onChange"});
     console.log("the errirs:" ,errors)
     const onSubmit=(data)=>{
         console.log(data)
@@ -33,7 +33,7 @@ const Register=()=>{
             
         }/>
         
-                <button type="submit">Register</button>
+                <button type="submit" disabled={!isDirty || !isValid}>Register</button>
                 
             </form>
         </div>
