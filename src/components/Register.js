@@ -16,7 +16,13 @@ const Register=()=>{
                 <input
                 type="text" 
                 
-                {...register("email", { required: "Email is required"})}
+                {...register("email", { 
+                    required: "Email is required",
+                    pattern: {
+                        value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
+                        message: "Email format not valid"
+                    }
+                })}
                 />
                 {errors.email && (<p className="danger"> {errors.email.message}</p> )}
 
