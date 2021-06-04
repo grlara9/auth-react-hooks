@@ -29,10 +29,16 @@ const Register=()=>{
                 <label>Username</label>
                 <input type="text" name="username" {...register('username')}/>
                 <label>Password</label> 
-                <input type="password" name="password" {...register('password', {minLength: 6})
-            
-        }/>
-        
+                <input type="password" name="password" {...register('password',
+                {required: "Password is required",
+                minLength: 6,
+                pattern: {
+                    value: /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/ , 
+                    message: "Password should contain at least one uppercase letter, lowercase letter, digit, and special symbol."
+                }
+            })}/>
+        {errors.password && (<p className="danger"> {errors.password.message}</p> )}
+
                 <button type="submit" disabled={!isDirty || !isValid}>Register</button>
                 
             </form>
