@@ -10,23 +10,26 @@ const Register=()=>{
         console.log(data)
     }
     return (
-        <div>
-            <form className="main__form" onSubmit={handleSubmit(onSubmit)}> 
-                <label className="label">Email</label> 
+        <div className="main__form">
+            <form  onSubmit={handleSubmit(onSubmit)}> 
+            
+                <label className="label">Email</label>  {errors.email && (<p className="danger"> {errors.email.message}</p> )}
                     <input
                         type="text" 
+                        placeholder="Enter Email"
                         {...register("email", { 
                             required: "Email is required",
                             pattern: {
                                 value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
                                 message: "Email format not valid"
                                 }})}/>
-                        {errors.email && (<p className="danger"> {errors.email.message}</p> )}
+                        
 
                 <label>Username</label>
                     <input 
                     type="text" 
                     name="username" 
+                    placeholder="Enter an Username"
                     {...register('username', {
                         required: "Username is required",
                         minLength: 6,
@@ -42,6 +45,7 @@ const Register=()=>{
                     <input 
                         type="password" 
                         name="password" 
+                        placeholder="Enter password"
                         {...register('password',
                             {required: "Password is required",
                             minLength: 6,

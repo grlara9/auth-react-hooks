@@ -1,52 +1,30 @@
-.danger{
-    color: red;
-    font-weight: bold;
-}
-
-
-
 .main__form{
-width:500px;
+width:600px;
 margin: 10px auto;
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+
+padding: 10px;
 }
 
-input[type=text]{
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
+input[type=text], input[type=password]{
+    width: 94%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
     font-family: inherit;
 }
 
-input[type=text]:focus{
-    background-color: #ffd969;
+input[type=text]:focus, input[type=password]:focus{
+    background-color: #ddd;
     border-color:#000;
+    outline: none;
 }
 
-input[type=password]{
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
-    font-family: inherit;
-}
 
-input[type=password]:focus{
-    background-color: #ffd969;
-    border-color:#000;
-}
-
-input[type=text]:hover{
-    border-color: lightgrey;
-}
-
-input[type=password]:hover{
-    border-color: lightgrey;
-}
 
 button{
     padding: 10px;
@@ -56,4 +34,10 @@ button{
     color:white;
     font-weight: 600;
 
+}
+.danger{
+    color: red;
+    
+    padding:0;
+    margin: 0;
 }
