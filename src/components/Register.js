@@ -36,7 +36,8 @@ const Register=()=>{
                             message: "Username contain uppercase , lowercase and number"
                         }
                     })}/>
-                
+                    {errors.username && (<p className="danger"> {errors.username.message}</p> )}
+
                 <label>Password</label> 
                     <input 
                         type="password" 
