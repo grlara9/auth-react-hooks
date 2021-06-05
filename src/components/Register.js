@@ -10,9 +10,9 @@ const Register=()=>{
         console.log(data)
     }
     return (
-        <div className="register">
-            <form onSubmit={handleSubmit(onSubmit)}> 
-                <label>Email</label> 
+        <div>
+            <form className="main__form" onSubmit={handleSubmit(onSubmit)}> 
+                <label className="label">Email</label> 
                     <input
                         type="text" 
                         {...register("email", { 
