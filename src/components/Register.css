@@ -8,7 +8,9 @@ align-items: center;
 
 padding: 10px;
 }
-
+form{
+    font-weight: bold;
+}
 input[type=text], input[type=password]{
     width: 94%;
     padding: 15px;
@@ -30,8 +32,6 @@ button{
     padding: 10px;
     border:none;
     width:100%;
-    background-color:#3F51B5;
-    color:white;
     font-weight: 600;
 
 }

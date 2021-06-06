@@ -12,7 +12,7 @@ const Register=()=>{
     return (
         <div className="main__form">
             <form  onSubmit={handleSubmit(onSubmit)}> 
-            
+            <h1>Register</h1>
                 <label className="label">Email</label>  {errors.email && (<p className="danger"> {errors.email.message}</p> )}
                     <input
                         type="text" 
