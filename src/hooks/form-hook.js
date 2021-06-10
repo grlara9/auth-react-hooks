@@ -1,6 +1,6 @@
 import { useCallback, useState} from 'react';
 
-export const useForm =()=>{
+const useForm =()=>{
     const [values, setValues] = useState({
         email:'',
         password:''
@@ -13,6 +13,8 @@ export const useForm =()=>{
             ...values,
             [name]: value
         })
+        console.log(values)
     }
     return {handleChange, values}
 }
+export default useForm;
