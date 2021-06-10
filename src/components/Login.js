@@ -1,14 +1,23 @@
 import React from 'react'
-import { useForm } from 'react-hook-form'
+
 import './Login.css'
 
 const Login = () =>{
-    const {register, handleSubmit, formState:{errors, isDirty, isValid},} = useForm({mode: "onChange"});
-    console.log("error object:" ,errors);
-
-    const onSubmit=(data)=>{
-        console.log(data)
-    }
+   
+    const [formState, inputHandler, setFormData] = useForm(
+        {
+          email: {
+            value: '',
+            isValid: false
+          },
+          password: {
+            value: '',
+            isValid: false
+          }
+        },
+        false
+      );
+      
     return(
         <div className="main__form">
         <form>
