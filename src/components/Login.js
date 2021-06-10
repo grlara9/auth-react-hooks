@@ -22,9 +22,9 @@ const Login = () =>{
         <div className="main__form">
         <form>
             <label>Email</label>
-            <input type="text" name="email" />
+            <input id="email" type="text" name="email" placeholder="Enter email" />
             <label>Password</label>
-            <input type="password" name="password" />
+            <input id="password" type="password" name="password" placeholder="Enter Password"/>
             <button type="submit">Login</button>
         </form>
     </div>
