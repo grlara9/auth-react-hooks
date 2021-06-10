@@ -1,23 +1,10 @@
 import React from 'react'
-
+import useForm from '../hooks/form-hook'
 import './Login.css'
 
 const Login = () =>{
    
-    const [formState, inputHandler, setFormData] = useForm(
-        {
-          email: {
-            value: '',
-            isValid: false
-          },
-          password: {
-            value: '',
-            isValid: false
-          }
-        },
-        false
-      );
-      
+    
     return(
         <div className="main__form">
         <form>
