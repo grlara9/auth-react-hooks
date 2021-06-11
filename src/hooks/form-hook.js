@@ -1,6 +1,6 @@
 import { useCallback, useState} from 'react';
 
-const useForm =()=>{
+const useForm =(validate)=>{
     const [values, setValues] = useState({
         email:'',
         password:''
@@ -18,7 +18,9 @@ const useForm =()=>{
 
     const handleSubmit =(e)=>{
         e.preventDefault()
+
+        setErrors(validate(values))
     }
-    return {handleChange, handleSubmit, values}
+    return {handleChange, handleSubmit, errors, values}
 }
 export default useForm;
