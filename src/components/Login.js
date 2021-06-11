@@ -4,16 +4,17 @@ import './Login.css'
 
 const Login = () =>{
    
-    const {handleChange, values} = useForm();
+    const {handleChange, values, handleSubmit} = useForm();
     return(
         <div className="main__form">
-        <form>
+        <form onSubmit={handleSubmit}>
             <label>Email</label>
             <input 
             id="email" 
             type="text" 
             name="email" 
             placeholder="Enter email" 
+            value={values.email}
             onChange={handleChange}
             />
             <label>Password</label>
@@ -22,6 +23,7 @@ const Login = () =>{
             type="password" 
             name="password" 
             placeholder="Enter Password"
+            value={values.password}
             onChange={handleChange}
             />
             <button type="submit">Login</button>
